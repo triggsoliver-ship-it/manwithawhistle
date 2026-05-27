@@ -431,12 +431,14 @@
     /* ---------- Recent work ---------- */
     .results{background:var(--cream)}
     .post-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
       gap: 28px;
-      align-items: start;
     }
     .post-frame{
+      flex: 1 1 320px;
+      max-width: 480px;
       position:relative;
       background:var(--cream-soft);
       border:1px solid var(--rule);
@@ -482,11 +484,7 @@
     }
     .follow-cta .ig-pill svg{width:20px;height:20px}
 
-    @media (max-width: 980px){
-      .post-grid{grid-template-columns: repeat(2, 1fr)}
-    }
     @media (max-width: 640px){
-      .post-grid{grid-template-columns: 1fr}
       .ig-slot{min-height: 480px}
     }
 
@@ -654,7 +652,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#results">Results</a>
-        <a href="#words">Words</a>
+        <a href="#words">Kind Words</a>
       </nav>
       <a href="#contact" class="cta">Book a chat
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -836,18 +834,6 @@
         ===========================================================
       -->
       <div class="post-grid">
-
-        <article class="post-frame reveal">
-          <div class="ig-slot">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/manwithawhistle/" data-instgrm-version="14"></blockquote>
-          </div>
-        </article>
-
-        <article class="post-frame reveal">
-          <div class="ig-slot">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/manwithawhistle/" data-instgrm-version="14"></blockquote>
-          </div>
-        </article>
 
         <article class="post-frame reveal">
           <div class="ig-slot">
