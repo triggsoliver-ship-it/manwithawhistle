@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -10,10 +10,15 @@
   <meta name="author" content="Owain Williams" />
   <link rel="canonical" href="https://manwithawhistle.com/" />
 
+  <!-- Favicon (inline SVG paw mark, matches the brand) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232A1D11'/%3E%3Cg%20fill='%23B68A3E'%3E%3Cellipse%20cx='20'%20cy='22'%20rx='6'%20ry='8'/%3E%3Cellipse%20cx='32'%20cy='16'%20rx='6'%20ry='8.5'/%3E%3Cellipse%20cx='44'%20cy='22'%20rx='6'%20ry='8'/%3E%3Cellipse%20cx='50'%20cy='34'%20rx='5.5'%20ry='7'/%3E%3Cpath%20d='M32%2030c-9%200-15%208-15%2015%200%206%205%209%2010%209%203%200%204-2%205-2s2%202%205%202c5%200%2010-3%2010-9%200-7-6-15-15-15z'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232A1D11'/%3E%3Cg%20fill='%23B68A3E'%3E%3Cellipse%20cx='20'%20cy='22'%20rx='6'%20ry='8'/%3E%3Cellipse%20cx='32'%20cy='16'%20rx='6'%20ry='8.5'/%3E%3Cellipse%20cx='44'%20cy='22'%20rx='6'%20ry='8'/%3E%3Cellipse%20cx='50'%20cy='34'%20rx='5.5'%20ry='7'/%3E%3Cpath%20d='M32%2030c-9%200-15%208-15%2015%200%206%205%209%2010%209%203%200%204-2%205-2s2%202%205%202c5%200%2010-3%2010-9%200-7-6-15-15-15z'/%3E%3C/g%3E%3C/svg%3E" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="manwithawhistle &mdash; Bespoke Dog Training" />
   <meta property="og:description" content="Calm, consistent and result-led dog training with Owain Williams." />
   <meta property="og:image" content="https://manwithawhistle.com/owain-hero-clean.jpeg" />
+  <meta property="og:image:alt" content="Owain Williams, dog trainer, with a working spaniel in the field" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://manwithawhistle.com/" />
   <meta property="og:site_name" content="manwithawhistle" />
@@ -24,6 +29,7 @@
   <meta name="twitter:title" content="manwithawhistle &mdash; Bespoke Dog Training" />
   <meta name="twitter:description" content="Calm, consistent and result-led dog training with Owain Williams." />
   <meta name="twitter:image" content="https://manwithawhistle.com/owain-hero-clean.jpeg" />
+  <meta name="twitter:image:alt" content="Owain Williams, dog trainer, with a working spaniel in the field" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -35,13 +41,24 @@
     "description": "Calm, consistent and result-led dog training with Owain Williams. General obedience, gundog training and therapy dog assessment across the UK.",
     "url": "https://manwithawhistle.com/",
     "image": "https://manwithawhistle.com/owain-hero-clean.jpeg",
+    "logo": "https://manwithawhistle.com/owain-hero-clean.jpeg",
     "telephone": "+44 7841 700495",
     "email": "manwithawhistle@gmail.com",
     "priceRange": "££",
     "address": { "@type": "PostalAddress", "addressCountry": "GB" },
+    "areaServed": { "@type": "Country", "name": "United Kingdom" },
     "founder": { "@type": "Person", "name": "Owain Williams" },
     "sameAs": ["https://instagram.com/manwithawhistle"],
-    "knowsAbout": ["Dog obedience training", "Gundog training", "Therapy dog assessment"]
+    "knowsAbout": ["Dog obedience training", "Gundog training", "Therapy dog assessment"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dog training services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Obedience" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gundog Training" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Therapy Dog Assessment" } }
+      ]
+    }
   }
   </script>
 
@@ -98,6 +115,17 @@
     button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
     ::selection{background:var(--brass);color:var(--cream-soft)}
     a:focus-visible,button:focus-visible{outline:2px solid var(--brass-deep);outline-offset:3px;border-radius:4px}
+
+    /* ---------- Skip link (a11y) ---------- */
+    .skip-link{
+      position:absolute;left:-999px;top:0;
+      z-index:100;
+      padding:12px 20px;
+      background:var(--ink);color:var(--cream);
+      border-radius:0 0 10px 0;
+      font-weight:600;font-size:.95rem;
+    }
+    .skip-link:focus{left:0}
 
     h1,h2,h3,h4{
       font-family:var(--serif);
@@ -770,6 +798,9 @@
 </head>
 <body>
 
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a href="#top" class="skip-link">Skip to main content</a>
+
   <!-- scroll progress -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
@@ -803,6 +834,8 @@
       </div>
     </div>
   </header>
+
+  <main id="main">
 
   <!-- =================== HERO =================== -->
   <section class="hero" id="top">
@@ -861,7 +894,7 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-portrait reveal" aria-hidden="true"></div>
+        <div class="about-portrait reveal" role="img" aria-label="Owain Williams working with a dog outdoors"></div>
         <div class="reveal">
           <div class="eyebrow"><span class="line"></span> Meet the trainer</div>
           <h2>Owain Williams &mdash; <em>man with a whistle</em></h2>
@@ -1097,6 +1130,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- =================== FOOTER =================== -->
   <footer>
