@@ -21,7 +21,7 @@ There are five parts:
 4. Point Ionos DNS at Vercel
 5. Wait for DNS, verify, set primary
 
-I've already done the local Git setup for you &mdash; the repo is initialised in this folder with the first commit ready to push.
+I've already done the local Git setup for you — the repo is initialised in this folder with the first commit ready to push.
 
 ---
 
