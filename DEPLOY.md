@@ -4,6 +4,15 @@ Same workflow as the GenoVaq site: GitHub repo &rarr; Vercel auto-deploys on pus
 
 One-time setup is about 15 minutes. After that, every change goes live with `git push`.
 
+> **Status (checked 2026-08-05):** Parts 1 and 2 are **done** &mdash; the repo is on GitHub and Vercel
+> auto-deploys every push to `main`. The site is live and correct at
+> **https://manwithawhistle.vercel.app**.
+>
+> Parts 3&ndash;5 are **not done**. `manwithawhistle.com` still resolves to Ionos
+> (`217.160.0.249`) and serves the Ionos "This domain is already registered" parking page;
+> there is no `www` record at all and no HTTPS certificate. Follow Parts 3, 4 and 5 below to
+> point the domain at Vercel.
+
 There are five parts:
 
 1. Push the site to a new GitHub repo
@@ -12,7 +21,7 @@ There are five parts:
 4. Point Ionos DNS at Vercel
 5. Wait for DNS, verify, set primary
 
-I've already done the local Git setup for you — the repo is initialised in this folder with the first commit ready to push.
+I've already done the local Git setup for you &mdash; the repo is initialised in this folder with the first commit ready to push.
 
 ---
 
@@ -179,4 +188,4 @@ Vercel builds a **preview deployment** on a unique URL for that branch, so you c
 
 ## Alternative: host directly on Ionos (not recommended)
 
-If Owain ever insists on hosting on Ionos itself: log into Ionos &rarr; Hosting &rarr; My Hosting Plans &rarr; open the package &rarr; File Manager. Upload `index.html` and the `assets/` folder into the web root (`htdocs/` or `public_html/`). Connect the domain to the hosting plan and enable Let's Encrypt SSL. It works but you lose the auto-deploy-on-push and preview-URL workflow &mdash; not worth it.
+If Owain ever insists on hosting on Ionos itself: log into Ionos &rarr; Hosting &rarr; My Hosting Plans &rarr; open the package &rarr; File Manager. Upload `index.html` and the hero JPEG into the web root (`htdocs/` or `public_html/`). Connect the domain to the hosting plan and enable Let's Encrypt SSL. It works but you lose the auto-deploy-on-push and preview-URL workflow &mdash; not worth it.
