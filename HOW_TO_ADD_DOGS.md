@@ -51,5 +51,6 @@ Just move the blocks up or down in the file — top of the file shows first on t
 ## Tips
 
 - Only **public** Instagram posts will render. Private accounts or hidden posts will appear as a blank Instagram card.
+- The permalink must be a **single post or reel** URL (`/p/...` or `/reel/...`). A plain profile URL such as `https://www.instagram.com/manwithawhistle/` will **not** render — the embed script silently produces an empty card. The block currently in `index.html` still holds a profile URL and needs a real post URL pasted in.
 - Reels and feed posts both work — use whichever URL Instagram gives you.
-- After editing, the change goes live as soon as you redeploy (drag the new zip onto Netlify, or `git push` if you've set up Git deploys).
+- After editing, `git push` to `main` — Vercel redeploys automatically in about 10 seconds.
