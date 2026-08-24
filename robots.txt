@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manwithawhistle.com/sitemap.xml
+Sitemap: https://manwithawhistle.co.uk/sitemap.xml
